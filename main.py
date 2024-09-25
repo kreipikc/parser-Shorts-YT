@@ -81,9 +81,8 @@ if __name__ == "__main__":
         choice = input()
 
         if choice.strip() == "1" or choice.lower().strip() == "parser":
-            print("Введите ссылку на страницу с shorts:")
-
             while True:
+                print("Введите ссылку на страницу с shorts:")
                 url = input()
                 if not check_youtube(url):
                     link_list, title_list, view_list = parser(url)
@@ -91,7 +90,7 @@ if __name__ == "__main__":
                         save_to_csv(link_list, title_list, view_list)
                         break
                     else:
-                        print("Empty result.")
+                        print("Empty result.\n")
                 elif url.strip().lower() == "exit": exit(0)
                 else:
                     print("Неверно введена ссылка.\nПроверьте написание и попробуйте снова.\n")
