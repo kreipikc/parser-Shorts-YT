@@ -22,6 +22,10 @@ def parser(url_local: str) -> List[List[str]]:
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     try:
         driver.get(url_local)
+
+        button = driver.find_element(By.CSS_SELECTOR, 'button[jsname="tWT92d"]')
+        button.click()
+
         driver.implicitly_wait(10)
         contents = driver.find_element(By.ID, "contents")
 
