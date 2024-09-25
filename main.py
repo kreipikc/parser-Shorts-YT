@@ -24,7 +24,8 @@ def parser(url_local: str) -> List[List[str]]:
         driver.get(url_local)
 
         button = driver.find_element(By.CSS_SELECTOR, 'button[jsname="tWT92d"]')
-        button.click()
+        if button:
+            button.click()
 
         driver.implicitly_wait(10)
         contents = driver.find_element(By.ID, "contents")
