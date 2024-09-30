@@ -63,6 +63,9 @@ def parser(url_local: str) -> List[List[str]]:
     except Exception as e:
         print(f"Error: {e}")
         return [[], [], []]
+    finally:
+        driver.close()
+        driver.quit()
 
 # Сохранение результатов в csv формате
 def save_to_csv(link: [str], title: [str], view: [str]) -> None:
