@@ -25,13 +25,28 @@ cd <yout_path>/parser-Shorts-YT
 Download all the necessary packages
 ```commandline
 pip install -r requirements.txt
+# or
+pip3 install -r requirements.txt
 ```
 
 Running the script
 ```commandline
 python src/main.py 
-# Or
+# or
 python3 src/main.py
+```
+
+### Structure project
+```commandline
+parser-Shorts-YT
+├── .gitignore
+├── README.md
+├── requirements.txt
+└── src
+    ├── main.py         # Entry point
+    ├── model.py        # Model for the 'video'
+    ├── parser.py       # Logic parser
+    └── utils.py        # Utilities
 ```
 
 ### Why did I even start creating this project?
